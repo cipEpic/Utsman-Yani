@@ -36,7 +36,7 @@
     <div id="myPopup" class="popup">
       <div class="popup-container">
         <div class="popup-content">
-          <h2 class="example1" data-aos="fade-down" data-aos-delay="800">The Wedding Of</h2>
+          <h2 class="example1" data-aos="fade-down" data-aos-delay="800" id="namaUndangan">The Wedding Of</h2>
           <h1 data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000">Utsman <span> &</span> Yani.</h1>
           <button data-aos="fade-up" data-aos-delay="800" class="close"><i data-feather="mail" style="vertical-align: middle; "></i> Buka Undangan</button>
           <audio id="popupAudio" src="audio/utsmansong.mp3"></audio> <!-- Ganti dengan path file audio yang sesuai -->
@@ -133,251 +133,107 @@
     <section class="story" id="story">
       <h2 data-aos="zoom-in" >Our Love Story</h2>
       <div class="part">
-        <h3 data-aos="fade-up">14 Agustus 2014</h3>
-        <p >Tahun 2014, dimana tahun kita menjalani hubungan tepatnya di tanggal 14 Agustus 2014 Utsman mengungkapkan perasannya secara langsung kepada Yani.</p>
+        <h3 data-aos="fade-up">14 Agustus 2020</h3>
+        <p data-aos="fade-up" data-aos-delay="300">Awal pertama berjumpa di Universitas Bina Sarana Informatika jurusan Ilmu komputer dan terlibat dalam satu organisasi yang sama bernama UKM Musik Mahasiswa.</p>
       </div>
       <div class="part">
-        <h3 data-aos="fade-up">27 Feburari 2021</h3>
-        <p >
-          Kita memutuskan untuk benar-benar serius untuk ke jenjang selanjutnya. Dan akhirnya, pada tanggal 27 Feburari tahun 2021 kita melangsungkan pertunangan. 
-        </p>
+        <h3 data-aos="fade-up">27 Mei 2021</h3>
+        <p data-aos="fade-up" data-aos-delay="300">Setelah sekian lama saling mengenal satu sama lain, memutuskan untuk memulai hubungan yang lebih serius.</p>
       </div>
       <div class="part">
-        <h3 data-aos="fade-up">26 Juli 2023</h3>
-        <p >Tahun ini, kita akan melangsungkan pernikahan tepatnya 26 Juli 2023, kita akan melaksanakan Akad Nikah dan di tanggal 30 Juli 2023 kita juga melangsungkan acara Resepsi. Kami mengubah status hingga menjadi pasangan suami istri. Semoga allah swt. Memberikan keberkahan pernikahan ini. "AMIN".</p>
+        <h3 data-aos="fade-up">21 Februari 2022</h3>
+        <p data-aos="fade-up" data-aos-delay="300">Pertama kali mengunjungi rumah masing-masing untuk memperkenalkan kepada orang tua.</p>
+      </div>
+      <div class="part">
+        <h3 data-aos="fade-up">30 Juli 2023</h3>
+        <p data-aos="fade-up" data-aos-delay="300">Tanggal yang dipilih untuk melanjutkan hubungan yang lebih serius lagi, dengan ikatan pernikahan.</p>
       </div>
     </section>
     <!-- section Story end -->
 
-    <section class="bg-event">
-      <main class="event" id="date">
-        <h2 data-aos="fade-right">Wedding <span>Event</span></h2>
-  
-        <div class="card" data-aos="fade-up-right" data-aos-delay="1000" data-aos-duration="1000">
-          <div class="box-img">
-            <div class="slider-img">
-              <img src="images/event/event.JPG" alt="" class="event-img" />
-              <img src="images/event/event1.JPG" alt="" class="event-img" />
-              <img src="images/event/event2.JPG" alt="" class="event-img" />
-              
-            </div>
+    <!-- section quotes start -->
+    <section class="quotes" id="quotes">
+      <div class="quotes-container">
+        <h2 data-aos="zoom-in" data-aos-duration="2000">Kirim Ucapan</h2>
+        <form data-aos="fade-up" data-aos-duration="2000" action="https://formspree.io/f/xzblabnq" method="POST">
+          <div class="form-group">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
           </div>
-          <div class="box-date">
-            <div class="title-event">
-              <h3>Akad Nikah </h3>
-            </div>
-            <div class="date-event"> 
-              <div class="tgl">
-                <h4>26</h4>
-              </div>
-              <div class="detail">
-                <h5>Rabu</h5>
-                <h5>Juli</h5>
-                <h5>2023</h5>
-              </div>
-
-              <div class="jam">
-                <p><i data-feather="clock" style="color: #000;"></i> 09.00 WIB </p>
-                <div class="lokasi">
-                  <h5>Lokasi Acara</h5>
-                  <p>Kp. Cisaru Kulon, RT/RW 002/008, Kelurahan Rancagoong, Kec Cilaku</p>
-                  <a href="https://goo.gl/maps/L2jcuRbeP6z76h6m7" target="_blank" class="cbt">Google Maps</a>
-               </div>
-              </div>
-           </div>
-        </div>
-      </main>
-      <main class="event-2" id="date">
-  
-        <div class="card" data-aos="fade-up-left" data-aos-duration="1000"  data-aos-delay="1000"> 
-          <div class="box-img">
-            <div class="slider-img">
-              <img src="images/event/event4.JPG" alt="" class="event-2-img" />
-              <img src="images/event/event5.JPG" alt="" class="event-2-img" />
-              <img src="images/event/event6.JPG" alt="" class="event-2-img" /> 
-            </div>
+          <div class="form-group">
+            <label for="message">Ucapan:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
           </div>
-          <div class="box-date">
-            <div class="title-event-2">
-              <h3>Resepsi </h3>
-            </div>
-            <div class="date-event-2"> 
-              <div class="tgl">
-                <h4>30</h4>
-              </div>
-              <div class="detail">
-                <h5>Minggu</h5>
-                <h5>Juli</h5>
-                <h5>2023</h5>
-              </div>
-
-              <div class="jam">
-                <p><i data-feather="clock" style="color: #000;"></i> 10.00 WIB </p>
-                <div class="lokasi">
-                  <h5>Lokasi Acara</h5>
-                  <p>Kp. Cisaru Kulon, RT/RW 002/008, Kelurahan Rancagoong, Kec Cilaku</p>
-                  <a href="https://goo.gl/maps/L2jcuRbeP6z76h6m7" class="cbt">Google Maps</a>
-               </div>
-              </div>
-           </div>
-        </div>
-      </main>
-    </section>
-    <!-- end Event Section-->
-
-    <!-- Start Galley Section -->
-     <div class="bg-gallery">
-      <section class="gallery" id="gallery">
-        <h2 data-aos="fade-right">Gallery Our Moment</h2>
-
-        <div class="container">
-          <div class="img-gallery">
-            <a href="images/gallery/1.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/1.JPG" alt="" class="img">
-            </a>
-            <a href="images/gallery/2.JPG" data-lightbox="models" data-title="Caption2">
-              <img src="images/gallery/2.JPG" alt="" class="img">
-            </a>
-            <a href="images/gallery/3.JPG" data-lightbox="models" data-title="Caption3">
-              <img src="images/gallery/3.JPG" alt="" class="img">
-            </a>
-            <a href="images/gallery/4.JPG" data-lightbox="models" data-title="Caption4">
-              <img src="images/gallery/4.JPG" alt="" class="img">
-            </a>
-            <a href="images/gallery/9.JPG" data-lightbox="models" data-title="Caption5">
-              <img src="images/gallery/9.JPG" alt="" class="img">
-            </a>
-            <a href="images/gallery/10.JPG" data-lightbox="models" data-title="Caption6">
-              <img src="images/gallery/10.JPG" alt="" class="img">
-            </a>
-            <a href="images/gallery/11.JPG" data-lightbox="models" data-title="Caption7">
-              <img src="images/gallery/11.JPG" alt="" class="img">
-            </a>
-            <a href="images/event/event5.JPG" data-lightbox="models" data-title="Caption8">
-              <img src="images/event/event5.JPG" alt="" class="img">
-            </a>
-        
+          <div class="form-group">
+            <button type="submit">Kirim</button>
           </div>
-        </div>
-      </section>
-    </div>
-    <!-- End Galley Section-->
-    <!-- Start Wedding gift -->
-    <section class="gift" id="gift">
-      <h2 data-aos="fade-down" >Wedding Gift</h2>
-      <p data-aos="fade-up" data-aos-delay="0">Bagi bapak/ibu/saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui virtual account atau e-wallet di bawah ini:</p>
-      <div class="buttom" data-aos="fade-up" >
-        <a class="rekening" id="show-cards"> Kilk Disini <i data-feather="arrow-right" style="vertical-align: middle"></i></a>
-      </div>
-      <div class="card-container" id="card-container">
-        <div class="card">
-          <h3>DANA</h3>
-          <h5 id="textSalin">0821-2087-7636</h5>
-          <p id="yani">Utsman</p>
-          <button class="salin" id="show-cards" onclick="noUtsman()"> <i data-feather="copy" style="vertical-align: middle"></i> Salin No.Dana </button>
-        </div>
-        <div class="card">
-          <h3>DANA</h3>
-          <h5 id="textSalin2">0813-1981-7474</h5>
-          <p id="yani">Yani Mulyani</p>
-          <button class="salin" onclick="noYani()" id="show-cards"> <i data-feather="copy" style="vertical-align: middle"></i> Salin No.Dana </button>
-        </div>
-    
+        </form>
       </div>
     </section>
-    <!-- End Wedding gift -->
-    <!-- Start RSVP -->
-    <section class="rsvp">
-      <div class="row">
+    <!-- section quotes end -->
 
-        <img src="images/rsvp.jpg" alt="" class="rsvp-img">
-        <div class="message" data-aos="fade-down">
-          <form id="formMessage"  >
-            <div class="input-group">
-              <input type="text" name="nama" placeholder="Nama">
-            </div>
-            <div class="input-group">
-              <input type="text" name="hubungan" placeholder="Hubungan (Saudara, Teman Kerja, Teman Sekolah)">
-            </div>
-            <div class="input-group">
-              <textarea  cols="30" rows="10" name="pesan" placeholder="Berikan Ucapan & Doa Terbaik Untuk kedua Mempelai"></textarea>
-            </div>
-            <button type="submit" class="btn">Send  <i data-feather="arrow-right" data-aos="fade-up" style="vertical-align: middle"></i></button>
-          </form>
-          <div class="container-card" data-aos="fade-up">
-            <div class="card-message">
-             
-            </div>
-          </div>
-        </div>
+    <!-- section maps start -->
+    <section class="maps" id="maps">
+      <h2 data-aos="zoom-in">Our Location</h2>
+      <div class="map-container" data-aos="fade-up" data-aos-duration="2000">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63491.336510558!2d106.79201808125!3d-6.3019353000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4200bf91a5e70d%3A0x2f0e6d64c30a8a84!2sUniversitas%20Bina%20Sarana%20Informatika%20Kampus%20Kaliabang!5e0!3m2!1sid!2sid!4v1688288168488!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
-    <!-- End RSVP -->
+    <!-- section maps end -->
 
-    <!-- Start Doa -->
-    <section class="doa" id="home">
-  
-      <div class="content">
-        <h1 >TerimaKasih</h1>
-        <h4>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.</h4>
-        <h4 style="margin-top: 8rem;" >KAMI YANG BERBAHAGIA</h4>
-        <h3 >Utsman <span>&</span> Yani</h3>
-      </div>
-    </section> 
-    <!-- End Doa -->
-
-    <!-- start footer -->
-    <footer>
-      <div class="logo" >
-        <img src="images/logo.png" alt="logo">
-        <a href="#" style="vertical-align: middle">Masreyxlvi.com</a>
-      </div>
-      <div class="socials" >
-        <a href="" class="wa"  >
-          WA : 0813 1336 2467 
-        </a>
-        <a href="" class="ig"  >| IG : @masreyxlvi</a>
-      </div>
-      <div class="credit" >
-        <p>Copyright &copy; 2022 - 2023</p>
-        <h5>HUBUNGI KAMI</h5>
-      </div>
-    </footer>
-    <!-- end footer -->
-
-    <!-- father icons -->  
-    <script>
-      feather.replace();
-    </script>
-    <!-- jquery -->
-    <script src="js/jquery.js"></script>
-    <!-- arctext -->
+    <!-- my js -->
     <script src="js/script.js"></script>
-    <!-- Lihgtbox js -->
-    <script src="js/lightbox-plus-jquery.js"></script>
-    <!-- Message Strorage -->
-    <script src="js/strorage.js"></script>
-    <!-- toastr -->
-    <script src="assets/toastr/toastr.min.js"></script>
-    <!-- Aos -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- arctext -->
-    <script src="assets/Arctext/js/jquery.arctext.js"></script>
-    <!-- sweetalert -->
+    <!-- lightbox -->
+    <script src="js/lightbox.js"></script>
     <script src="assets/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="assets/toastr/toastr.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-       
-        const gallery = document.querySelectorAll('.img');
+      AOS.init({
+        once: true,
+      });
 
-        gallery.forEach((img, i) => {
-            img.dataset.aos = 'fade-down';
-            img.dataset.aosDelay = i * 100;
-        });
-        AOS.init({
-          duration: 1500,
-          once: true
-        });
-      </script>
-     
+      feather.replace();
+
+      // Function to get query parameter by name
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Use the function to get the 'u' parameter value
+      const namaUndangan = getQueryParam('u');
+
+      // If 'nama-undangan' is present, customize the content
+      if (namaUndangan) {
+        document.getElementById('namaUndangan').innerText = namaUndangan;
+      }
+
+      // Popup functionality
+      document.addEventListener('DOMContentLoaded', function () {
+        var popup = document.getElementById('myPopup');
+        var closeBtn = document.querySelector('.close');
+        var popupAudio = document.getElementById('popupAudio');
+
+        // Play the audio when the popup opens
+        function openPopup() {
+          popup.classList.add('active');
+          popupAudio.play();
+        }
+
+        // Close the popup
+        function closePopup() {
+          popup.classList.remove('active');
+          popupAudio.pause();
+          popupAudio.currentTime = 0; // Reset audio to the beginning
+        }
+
+        // Show the popup after a delay
+        setTimeout(openPopup, 1000); // Adjust the delay (in milliseconds) as needed
+
+        // Close the popup when the close button is clicked
+        closeBtn.addEventListener('click', closePopup);
+      });
+    </script>
   </body>
 </html>
