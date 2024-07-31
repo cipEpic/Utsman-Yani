@@ -37,7 +37,11 @@
       <div class="popup-container">
         <div class="popup-content">
           <h2 class="example1" data-aos="fade-down" data-aos-delay="800">The Wedding Of</h2>
-          <h1 data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000">Utsman <span> &</span> Yani.</h1>
+          <h1 data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000">
+            Utsman <span> &</span> Yani.
+          </h1>
+          <h2 id="guestName"></h2> <!-- Add this line where you want to display the guest's name -->
+          
           <button data-aos="fade-up" data-aos-delay="800" class="close"><i data-feather="mail" style="vertical-align: middle; "></i> Buka Undangan</button>
           <audio id="popupAudio" src="audio/utsmansong.mp3"></audio> <!-- Ganti dengan path file audio yang sesuai -->
         </div>
@@ -378,6 +382,23 @@
           once: true
         });
       </script>
-     
+     <script>
+      // Function to get URL parameters
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+    
+      // Get the guest name from the URL parameter
+      const guestName = getUrlParameter('u');
+    
+      // Display the guest name if it exists
+      if (guestName) {
+        document.getElementById('guestName').textContent = `Dear ${guestName}`;
+      }
+    </script>
+    
   </body>
 </html>
