@@ -159,3 +159,88 @@ function noYani() {
   document.body.removeChild(textarea);
   toastr["success"]("No Dana Berhasil Disalin", "Success");
 }
+
+async function insert() {
+  const form = $("#formMessage").serializeArray();
+  let newData = {};
+  form.forEach(function (item) {
+    let name = item["name"];
+    let value = item["value"];
+    newData[name] = value;
+  });
+
+  try {
+    const response = await fetch('/api/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newData)
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error('Error:', error);
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Gagal mengirim pesan. Silakan coba lagi.",
+      showConfirmButton: true,
+    });
+  }
+}
+
+async function showData() {
+  try {
+    const response = await fetch('/api/messages');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const dataMessage = await response.json();
+
+    let row = "";
+
+    if (dataMessage.length === 0) {
+      row = `<h1 class="title" style="text-align : center">Belum Ada Pesan Masuk</h1>`;
+    } else {
+      dataMessage.forEach(function (item) {
+        row += `<h1 class="title">${item["nama"]}</h1>`;
+        row += `<h4>- ${item["hubungan"]}</h4>`;
+        row += `<p>${item["pesan"]}</p>`;
+      });
+    }
+    $(".card-message").html(row);
+  } catch (error) {
+    console.error('Error:', error);
+    $(".card-message").html('<h1 class="title" style="text-align : center">Gagal memuat pesan</h1>');
+  }
+}
+
+$(function () {
+  // initialize
+  showData();
+
+  // events
+  $("#formMessage").on("submit", function (e) {
+    e.preventDefault();
+    insert().then((result) => {
+      if (result) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Terima Kasih Atas Ucapan & Doanya ",
+          showConfirmButton: false,
+          timer: 2000,
+        });
+        showData();
+      }
+    });
+  });
+});
