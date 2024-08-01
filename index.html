@@ -16,6 +16,9 @@
 
     <!-- father icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- script pesan -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- my css -->
     <link rel="stylesheet" href="css/style.css" />
@@ -400,5 +403,40 @@
       }
     </script>
     
+    <script>
+      // Fungsi untuk mengirim data ke API endpoint
+      function sendMessage(event) {
+        event.preventDefault();
+        
+        // Ambil data dari form
+        const formData = new FormData(document.getElementById('formMessage'));
+        const data = {
+          nama: formData.get('nama'),
+          hubungan: formData.get('hubungan'),
+          pesan: formData.get('pesan')
+        };
+    
+        // Kirim data ke API endpoint menggunakan Axios
+        axios.post('URL_API_ENDPOINT', data)
+          .then(response => {
+            if (response.status === 200) {
+              toastr.success('Pesan berhasil dikirim!');
+              // Reset form setelah berhasil mengirim pesan
+              document.getElementById('formMessage').reset();
+            } else {
+              toastr.error('Gagal mengirim pesan. Silakan coba lagi.');
+            }
+          })
+          .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            toastr.error('Gagal mengirim pesan. Silakan coba lagi.');
+          });
+      }
+    
+      // Tambahkan event listener pada form
+      document.getElementById('formMessage').addEventListener('submit', sendMessage);
+    </script>
+    
+
   </body>
 </html>
